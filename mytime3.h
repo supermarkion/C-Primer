@@ -1,6 +1,6 @@
-// mytime2.h -- Time class after operator overloading
-#ifndef MYTIME2_H_
-#define MYTIME2_H_
+// mytime3.h -- Time class after operator overloading
+#ifndef MYTIME3_H_
+#define MYTIME3_H_
 class Time
 {
 private:
@@ -15,6 +15,8 @@ public:
 	Time operator+ (const Time & t) const;
 	Time operator- (const Time & t) const;
 	Time operator* (double n) const;
-	void Show() const;
+	friend Time operator* (double m, const Time & t)
+		{ return t * m; } 		// inline defintion
+	friend std::ostream & operator<< (std::ostream & os, const Time & t);
 };
 #endif

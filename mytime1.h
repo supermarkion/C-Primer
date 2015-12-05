@@ -1,6 +1,6 @@
 // mytime1.h -- Time class after operator overloading
-#ifndef MYTIME0_H_
-#define MYTIME0_H_
+#ifndef MYTIME1_H_
+#define MYTIME1_H_
 class Time
 {
 private:
